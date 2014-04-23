@@ -1,0 +1,9 @@
+<h1>Shorty</h1>
+<%= form_for(@url) do |form| %>
+  <%= form.text_field :url_address, placeholder: "Paste URL here" %>
+  <%= form.submit "Shorten URL" %>
+<% end %>
+
+<% @urls.each do |url| %>
+  <%= url.url_address %>
+<% end %>
